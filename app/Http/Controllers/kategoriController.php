@@ -43,7 +43,9 @@ class kategoriController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $kategori = DB::table('kategori')->where('kode_kategori', $id)->first();
+        return view('kategori.edit', compact('kategori'));
+
     }
 
     /**
@@ -51,7 +53,20 @@ class kategoriController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request-validate([
+            'nama_kategori' => 'required',
+            'nama_suppler' => 'required',
+
+        ]);
+
+        $data = [
+            'nama_kategori' => $request->nama_kategori,
+            'nama_supplier' => $request-nama_supplier,
+
+        ];
+
+        DB::table('kategori')->whwere(kode_kategori, $id)->update($data);
+        return redirect::route('kategori.index')->with('success', 'Data Berhasil Diubah');
     }
 
     /**
@@ -59,6 +74,7 @@ class kategoriController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        DB::table('kategori')->where('kode_kategori', $id)->delete($data);
+        return redirect::route('kategori.index')->with('success', 'Data Berhasil Dihapus');
     }
 }

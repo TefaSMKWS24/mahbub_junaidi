@@ -51,7 +51,22 @@ class kasirController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+          'nama_kasir' => 'required',
+          'shif_mulai' => 'required',
+          'shif_selesai' => 'required',
+          'nohp' => 'required',
+        ]);
+
+        $data = [
+            'nama_kasir' => $request->nama_kasir,
+            'shif_mulai' => $request->shif_mulai,
+            'shif_selesai' => $request->shif_selesai,
+            'nohp' => $request->nohp,
+        ];
+
+        DB::table('kasir')->where('id', $id)->update($data);
+        return redirect()->view(kasir.index);
     }
 
     /**
@@ -59,6 +74,7 @@ class kasirController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        DB::table('kasir')->where('kode_kasir', $id)->delete($data);
+        return redirect()->view(kasir.index);
     }
 }
