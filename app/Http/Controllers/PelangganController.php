@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use illuminate\support\facades\DB;
-use illuminate\support\facades\redirect;
-use illuminate\support\facades\validator;
+use Illuminate\Support\Facades\DB;
+use illuminate\support\facades\Redirect;
+use illuminate\support\facades\Validator;
 
 class PelangganController extends Controller
 {
