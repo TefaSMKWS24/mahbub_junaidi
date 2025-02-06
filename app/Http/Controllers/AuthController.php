@@ -18,8 +18,16 @@ class AuthController extends Controller
         }
         else{
             echo "login gagal";
-            // return redirect('/user)
+            // return redirect('/user)->with('warning', 'NIS / PASSWORD SALAH!');
         }
 
     }
+public function logoutkasir()
+{
+    if(Auth::guard('kasir')->check()){
+    Auth::guard('kasir')->logout();
+    return redirect('/');
+    }
+}
+
 }
