@@ -8,6 +8,7 @@ use illuminate\support\facades\Redirect;
 use illuminate\support\facades\Validator;
 
 class BaragController extends Controller
+
 {
     /**
      * Display a listing of the resource.
