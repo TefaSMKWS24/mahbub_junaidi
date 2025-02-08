@@ -18,9 +18,6 @@ class KasirSedeer extends Seeder
             [
                 'kode_kasir' => 'KSR001',
                 'nama_kasir' => 'kasir 2',
-                'shif_mulai' => '08:00',
-                'shif_selesai' => '16:00',
-                'nohp' => '081234567890',
                 'password' => Hash::make('1234'),
             ],
         ];
