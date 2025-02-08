@@ -48,11 +48,11 @@ Route::middleware(['auth:kasir'])->group(function(){
     Route::get('/kasir/dashboard', [dASHBOARDKasirController::class, 'dashboard']);
     Route::get('/kasir/logout', [AuthController::class, 'logoutkasir']);
 
-    Route::resource('barang', BarangController::class);
-    Route::resource('kategori', KategoriController::class);
-    Route::resource('pelanggan', PelangganController::class);
-    Route::resource('kasir', KasirController::class);
-    Route::resource('Transaksi', TansaksiController::class);
+    //Route::resource('barang', BarangController::class);
+    //Route::resource('kategori', KategoriController::class);
+    //Route::resource('pelanggan', PelangganController::class);
+    //Route::resource('kasir', KasirController::class);
+    //Route::resource('Transaksi', TansaksiController::class);
 
 });
 
