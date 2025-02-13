@@ -56,7 +56,7 @@
       <div class="card">
         <div class="card-body login-card-body">
           <p class="login-box-msg">Sign in to start your session</p>
-          <form action="/loginkasir" method="post">
+          <form action="/loginadmin" method="post">
             @csrf
             <div class="input-group mb-3">
               <input type="text" name="kode_kasir" id="kode_kasir" class="form-control" placeholder="Email" />

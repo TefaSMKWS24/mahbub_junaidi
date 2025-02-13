@@ -8,11 +8,13 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class User extends Authenticatable
+class data_kasir extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
-      /**
+    protected $table = 'data_kasir';
+
+    /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
@@ -23,6 +25,7 @@ class User extends Authenticatable
         'nama_kasir',
         'nohp'
     ];
+
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -32,6 +35,7 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
+
     /**
      * The attributes that should be cast.
      *
